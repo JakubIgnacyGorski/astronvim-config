@@ -17,33 +17,4 @@ return {
       },
     },
   },
-  {
-    "AstroNvim/astrolsp",
-    ---@type AstroLSPOpts
-    opts = {
-      mappings = {
-        n = {
-          -- this mapping will only be set in buffers with an LSP attached
-          K = {
-            function() vim.lsp.buf.hover() end,
-            desc = "Hover symbol details",
-          },
-          gD = {
-            function() vim.lsp.buf.declaration() end,
-            desc = "Go to declaration of current symbol",
-          },
-          gd = {
-            function() vim.lsp.buf.definition() end,
-            desc = "Go to definition of current symbol",
-          },
-          ["<Leader>lc"] = {
-            function() vim.lsp.buf.references() end,
-            desc = "List references (calls to) current symbol",
-          },
-          ["<Leader>r"] = { desc = "Renames" },
-          ["<Leader>rn"] = { function() vim.lsp.buf.rename() end, desc = "Rename symbol" },
-        },
-      },
-    },
-  },
 }
