@@ -12,7 +12,7 @@ return {
     config = function()
       require("mason-lspconfig").setup {
         ensure_installed = {
-          "pyright",
+          "ruff",
           "clangd",
           "lua_ls",
           "bashls",
@@ -26,7 +26,7 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local lspconfig = require "lspconfig"
-      lspconfig.pyright.setup {}
+      lspconfig.ruff.setup {}
       lspconfig.clangd.setup {}
       lspconfig.lua_ls.setup {}
       lspconfig.bashls.setup {}

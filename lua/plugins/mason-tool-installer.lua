@@ -7,6 +7,7 @@ return {
       "prettier", -- JS/TS/CSS/HTML
       "clang-format", -- C/C++
       "shellharden", -- bash
+      "mypy",
     },
   },
 }
