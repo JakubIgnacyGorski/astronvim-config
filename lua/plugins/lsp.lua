@@ -13,6 +13,7 @@ return {
       require("mason-lspconfig").setup {
         ensure_installed = {
           "ruff",
+          "pyright",
           "clangd",
           "lua_ls",
           "bashls",
@@ -27,6 +28,7 @@ return {
     config = function()
       local lspconfig = require "lspconfig"
       lspconfig.ruff.setup {}
+      lspconfig.pyright.setup {}
       lspconfig.clangd.setup {}
       lspconfig.lua_ls.setup {}
       lspconfig.bashls.setup {}
