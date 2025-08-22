@@ -26,3 +26,4 @@ end
 require "lazy_setup"
 require "polish"
 require "user.spell-checker"
+require "user.commands"
