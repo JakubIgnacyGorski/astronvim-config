@@ -14,6 +14,7 @@ return {
 
           -- load all buffers
           ["<leader>bm"] = { "<cmd>LoadAllFilesForDiagnostics<cr>", desc = "Load all files to buffer" },
+          ["<leader>W"] = { "<cmd>noautocmd w<cr>", desc = "Save without formatting" },
         },
       },
     },
