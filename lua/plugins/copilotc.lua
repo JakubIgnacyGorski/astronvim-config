@@ -19,6 +19,8 @@ return {
         { "<leader>mc", function() chat.toggle() end, desc = "Toggle Copilot Chat" },
         { "<leader>me", function() chat.explain() end, desc = "Explain code" },
         { "<leader>mt", function() chat.tests() end, desc = "Generate tests" },
+        { "<leader>mf", function() chat.fix() end, desc = "Suggest fix/refactor for current line" },
+        { "<leader>mr", function() chat.refactor() end, mode = "v", desc = "Refactor selected code" },
         {
           "<leader>mb",
           function() chat.ask("Explain this file", { selection = false }) end,

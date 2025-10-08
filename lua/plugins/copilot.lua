@@ -41,6 +41,18 @@ return {
               desc = "Toggle Copilot suggestion",
             },
           },
+          i = {
+            -- Next suggestion
+            ["<C-]>"] = {
+              function() require("copilot.suggestion").next() end,
+              desc = "Next Copilot suggestion",
+            },
+            -- Previous suggestion
+            ["<C-[>"] = {
+              function() require("copilot.suggestion").prev() end,
+              desc = "Previous Copilot suggestion",
+            },
+          },
         },
       },
     },
