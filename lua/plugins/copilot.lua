@@ -43,12 +43,12 @@ return {
           },
           i = {
             -- Next suggestion
-            ["<C-]>"] = {
+            ["<C-\\>"] = {
               function() require("copilot.suggestion").next() end,
               desc = "Next Copilot suggestion",
             },
             -- Previous suggestion
-            ["<C-[>"] = {
+            ["<C-'>"] = {
               function() require("copilot.suggestion").prev() end,
               desc = "Previous Copilot suggestion",
             },
