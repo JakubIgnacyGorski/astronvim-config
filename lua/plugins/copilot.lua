@@ -1,8 +1,9 @@
 return {
   "zbirenbaum/copilot.lua",
+  enabled = true,
+  lazy = false,
   cmd = "Copilot",
-  build = ":Copilot auth",
-  event = "BufReadPost",
+  event = "InsertEnter",
   opts = {
     suggestion = {
       keymap = {
@@ -20,6 +21,22 @@ return {
       },
     },
   },
+  config = function()
+    -- github copilot
+    vim.keymap.set("n", "<leader>ma", "<Cmd>Copilot! attach<CR>", { desc = "copilot attach (forced)", silent = true })
+    vim.keymap.set("n", "<leader>md", "<Cmd>Copilot detach<CR>", { desc = "copilot detach", silent = true })
+    vim.keymap.set("n", "<leader>mS", "<Cmd>Copilot status<CR>", { desc = "copilot status", silent = true })
+    require("copilot").setup {
+      panel = { enabled = false },
+      suggestion = {
+        enabled = false, -- we use blink-cmp + plugin for copilot
+        auto_trigger = true, -- start as soon as insert mode is active
+      },
+      filetypes = {
+        ["*"] = false, -- disable for all filetypes (`:Copilot! attach` will work, though)
+      },
+    }
+  end,
   specs = {
     {
       "AstroNvim/astrocore",
