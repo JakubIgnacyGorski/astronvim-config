@@ -29,7 +29,7 @@ return {
     require("copilot").setup {
       panel = { enabled = false },
       suggestion = {
-        enabled = false, -- we use blink-cmp + plugin for copilot
+        enabled = true, -- we use blink-cmp + plugin for copilot
         auto_trigger = true, -- start as soon as insert mode is active
       },
       filetypes = {
