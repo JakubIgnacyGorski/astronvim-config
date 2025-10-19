@@ -27,13 +27,13 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local lspconfig = require "lspconfig"
-      lspconfig.ruff.setup {}
-      lspconfig.pyright.setup {}
-      lspconfig.clangd.setup {}
-      lspconfig.lua_ls.setup {}
-      lspconfig.bashls.setup {}
-      lspconfig.jsonls.setup {}
-      lspconfig.rust_analyzer.setup {
+      vim.lsp.config("ruff", {})
+      vim.lsp.config("pyright", {})
+      vim.lsp.config("clangd", {})
+      vim.lsp.config("lua_ls", {})
+      vim.lsp.config("bashls", {})
+      vim.lsp.config("jsonls", {})
+      vim.lsp.config("rust_analyzer", {
         cmd = { "rust-analyzer" },
         settings = {
           ["rust-analyzer"] = {
@@ -50,7 +50,7 @@ return {
             },
           },
         },
-      }
+      })
     end,
   },
 }
